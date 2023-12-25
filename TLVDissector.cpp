@@ -132,8 +132,6 @@ MATTER_ERROR TLVDissector::AddTypedItem(proto_tree* tree, int hfindex, tvbuff_t*
 {
     MATTER_ERROR err = MATTER_NO_ERROR;
     TLVType elemType;
-    uint32_t tag;
-    proto_item *listItem;
 
     elemType = GetType();
 
@@ -274,7 +272,7 @@ MATTER_ERROR
 AppendIMPath(TLVReader& reader, char *& strBuf, size_t& strBufSize)
 {
     MATTER_ERROR err;
-    TLVType pathContainer, instanceLocatorContainer;
+    TLVType pathContainer;
     bool addSep = false;
 
     VerifyOrExit(reader.GetType() == kTLVType_Path, err = MATTER_ERROR_UNEXPECTED_TLV_ELEMENT);
@@ -317,7 +315,7 @@ AppendIMPath(TLVReader& reader, char *& strBuf, size_t& strBufSize)
             err = reader.Get(pathElement);
             SuccessOrExit(err);
 
-            char *pathElementName;
+            const char *pathElementName;
             switch (tagNum) {
                 case CommandPathIB::kTag_Endpoint: pathElementName = "Endpoint"; break;
                 case CommandPathIB::kTag_Cluster:  pathElementName = "Cluster"; break;

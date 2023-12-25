@@ -184,53 +184,6 @@ exit:
     return err;
 }
 
-static MATTER_ERROR
-AddInvokeResponseIB(TLVDissector& tlvDissector, proto_tree *tree, tvbuff_t* tvb)
-{
-    MATTER_ERROR err;
-    proto_tree *dataElemTree;
-
-    err = tlvDissector.EnterContainer();
-    SuccessOrExit(err);
-
-    while (true) {
-
-        err = tlvDissector.Next();
-        if (err == MATTER_END_OF_TLV)
-            break;
-        SuccessOrExit(err);
-
-        uint64_t tag = tlvDissector.GetTag();
-        TLVType type = tlvDissector.GetType();
-
-        VerifyOrExit(IsContextTag(tag), err = MATTER_ERROR_UNEXPECTED_TLV_ELEMENT);
-
-        tag = TagNumFromTag(tag);
-        switch (tag) {
-        case InvokeResponseIB::kTag_Command:
-            VerifyOrExit(type == kTLVType_Structure, err = MATTER_ERROR_UNEXPECTED_TLV_ELEMENT);
-            err = AddCommandDataIB(tlvDissector, tree, tvb);
-            SuccessOrExit(err);
-            break;
-        case InvokeResponseIB::kTag_Status:
-            err = tlvDissector.AddSubTreeItem(tree, hf_CommandStatusIB, ett_CommandElem, tvb, dataElemTree);
-            SuccessOrExit(err);
-
-            err = tlvDissector.AddGenericTLVItem(dataElemTree, hf_DataElem_PropertyData, tvb, true);
-            SuccessOrExit(err);
-            break;
-        default:
-            ExitNow(err = MATTER_ERROR_UNEXPECTED_TLV_ELEMENT);
-        }
-    }
-
-    err = tlvDissector.ExitContainer();
-    SuccessOrExit(err);
-
-exit:
-    return err;
-}
-
 static int
 DissectIMStatusResponse(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree _U_, const MatterMessageInfo& msgInfo)
 {

@@ -51,7 +51,7 @@ MessageEncryptionKey_copy_cb(void *dest, const void *orig, size_t len _U_)
     d->keyId = o->keyId;
     d->sessionType = o->sessionType;
 
-    d->dataEncKey = (char *)g_memdup(o->dataEncKey, o->dataEncKeyLen);
+    d->dataEncKey = (char *)g_memdup2(o->dataEncKey, o->dataEncKeyLen);
     d->dataEncKeyLen = o->dataEncKeyLen;
 
     return dest;
