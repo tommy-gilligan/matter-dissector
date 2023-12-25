@@ -76,8 +76,9 @@ HEADERS = moduleinfo.h  packet-matter.h packet-matter-decrypt.h TLVDissector.h M
 OBJS := $(foreach src, $(SRCS), $(src:.c=.o))
 OBJS := $(foreach src, $(OBJS), $(src:.cpp=.o))
 
-TEST_INPUT ?= tests/chip_tool_test_TestCluster_22f09.pcapng
-TEST_ECHO ?= tests/matter_echo.pcapng
+TEST_INPUT ?= tests/chip_tool_test_TestCluster_22f09
+TEST_ECHO ?= tests/matter_echo
+TEST_ONOFF ?= tests/matter_pair_then_onoff
 
 TEST_SRCS := tests/test-packet-matter-decrypt.cpp
 #TEST_SRCS  = $(shell find . -maxdepth 1 -name 'tests/*.c')
@@ -107,16 +108,16 @@ install : $(PLUGIN_OUT)
 	cp $(PLUGIN_OUT) ~/.local/lib/wireshark/plugins/3.6/epan
 
 test : install
-	WIRESHARK_RUN_FROM_BUILD_DIRECTORY=1 $(WIRESHARK_BUILD_DIR)/run/wireshark $(TEST_INPUT)
-
-testecho : install
-	WIRESHARK_RUN_FROM_BUILD_DIRECTORY=1 $(WIRESHARK_BUILD_DIR)/run/wireshark $(TEST_ECHO)
+	$(WIRESHARK_BUILD_DIR)/run/tshark -Y matter -2 -r $(TEST_INPUT).pcapng -T json > $(TEST_INPUT).json
+	$(WIRESHARK_BUILD_DIR)/run/tshark -Y matter -2 -r $(TEST_ECHO).pcapng -T json > $(TEST_ECHO).json
+	$(WIRESHARK_BUILD_DIR)/run/tshark -Y matter -2 -r $(TEST_ONOFF).pcapng -T json > $(TEST_ONOFF).json
+	git status -- tests/*.json
 
 debug : install
-	WIRESHARK_RUN_FROM_BUILD_DIRECTORY=1 libtool --mode=execute gdb $(WIRESHARK_BUILD_DIR)/run/wireshark -ex "set args $(TEST_INPUT)"
+	libtool --mode=execute gdb $(WIRESHARK_BUILD_DIR)/run/wireshark -ex "set args $(TEST_INPUT)"
 
 debugecho : install
-	WIRESHARK_RUN_FROM_BUILD_DIRECTORY=1 libtool --mode=execute gdb $(WIRESHARK_BUILD_DIR)/run/wireshark -ex "set args $(TEST_ECHO)"
+	libtool --mode=execute gdb $(WIRESHARK_BUILD_DIR)/run/wireshark -ex "set args $(TEST_ECHO)"
 
 check: install $(TEST_EXES)
 	tests/test-packet-matter-decrypt.exe

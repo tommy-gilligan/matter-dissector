@@ -1,0 +1,794 @@
+[
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:51.583773219 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643511.583773219",
+          "frame.time_delta": "0.000000000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "0.000000000",
+          "frame.number": "1",
+          "frame.len": "109",
+          "frame.cap_len": "109",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "56:31",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "53",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "53",
+          "udp.checksum": "0x0048",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "00:34:12:01:01:00:00:00:6f:78:5c:03:5b:a7:90:cf:42:ad:a5:9f:37:be:52:c4:95:63:56:92:42:86:f1:01:4d:cd:ae:6b:d0:43:51:f5:34:04:17:83:c1"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000001",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "6f:78:5c:03:5b:a7:90:cf:42:ad:a5:9f:37:be:52:c4:95:63:56:92:42:86:f1:01:4d:cd:ae:6b:d0:43:51:f5:34:04:17:83:c1"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:51.584348333 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643511.584348333",
+          "frame.time_delta": "0.000575114",
+          "frame.time_delta_displayed": "0.000575114",
+          "frame.time_relative": "0.000575114",
+          "frame.number": "2",
+          "frame.len": "113",
+          "frame.cap_len": "113",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "08:00",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x01163f",
+          "ipv6.plen": "57",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5540",
+          "udp.dstport": "5541",
+          "udp.port": "5540",
+          "udp.port": "5541",
+          "udp.length": "57",
+          "udp.checksum": "0x004c",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "0.000575114",
+            "udp.time_delta": "0.000575114"
+          },
+          "udp.payload": "00:34:12:01:01:00:00:00:5e:07:ec:3d:ca:7e:c0:1b:4b:77:e5:ea:78:f5:3d:c7:38:64:58:dc:83:c3:08:47:69:98:77:03:b5:32:6c:3b:0a:f3:46:46:86:81:2a:95:f1"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000001",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "5e:07:ec:3d:ca:7e:c0:1b:4b:77:e5:ea:78:f5:3d:c7:38:64:58:dc:83:c3:08:47:69:98:77:03:b5:32:6c:3b:0a:f3:46:46:86:81:2a:95:f1"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:51.584801647 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643511.584801647",
+          "frame.time_delta": "0.000453314",
+          "frame.time_delta_displayed": "0.000453314",
+          "frame.time_relative": "0.001028428",
+          "frame.number": "3",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "c8:cc",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "42",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "42",
+          "udp.checksum": "0x003d",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "0.001028428",
+            "udp.time_delta": "0.000453314"
+          },
+          "udp.payload": "00:34:12:01:02:00:00:00:d2:fd:a9:e5:1f:28:2c:ec:30:20:49:aa:28:91:ff:6f:64:c8:b7:b7:20:3d:3c:17:50:01"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000002",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "d2:fd:a9:e5:1f:28:2c:ec:30:20:49:aa:28:91:ff:6f:64:c8:b7:b7:20:3d:3c:17:50:01"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:52.585011059 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643512.585011059",
+          "frame.time_delta": "1.000209412",
+          "frame.time_delta_displayed": "1.000209412",
+          "frame.time_relative": "1.001237840",
+          "frame.number": "4",
+          "frame.len": "109",
+          "frame.cap_len": "109",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "00:00",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "53",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "53",
+          "udp.checksum": "0x0048",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "1.001237840",
+            "udp.time_delta": "1.000209412"
+          },
+          "udp.payload": "00:34:12:01:03:00:00:00:fc:4f:67:01:f5:c3:ff:65:6b:69:69:0d:44:1c:ba:89:f1:b8:ba:b3:ee:51:76:2d:7b:c3:33:70:12:39:8f:40:21:aa:46:67:16"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000003",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "fc:4f:67:01:f5:c3:ff:65:6b:69:69:0d:44:1c:ba:89:f1:b8:ba:b3:ee:51:76:2d:7b:c3:33:70:12:39:8f:40:21:aa:46:67:16"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:52.586905953 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643512.586905953",
+          "frame.time_delta": "0.001894894",
+          "frame.time_delta_displayed": "0.001894894",
+          "frame.time_relative": "1.003132734",
+          "frame.number": "5",
+          "frame.len": "113",
+          "frame.cap_len": "113",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "20:32",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x01163f",
+          "ipv6.plen": "57",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5540",
+          "udp.dstport": "5541",
+          "udp.port": "5540",
+          "udp.port": "5541",
+          "udp.length": "57",
+          "udp.checksum": "0x004c",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "1.003132734",
+            "udp.time_delta": "0.001894894"
+          },
+          "udp.payload": "00:34:12:01:02:00:00:00:3b:a5:10:5a:8f:12:6f:93:bd:f1:48:62:3a:1f:19:f4:61:cc:70:61:ca:d4:fe:76:0f:1c:23:de:55:2e:29:97:37:6c:1e:38:31:d3:77:71:8a"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000002",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "3b:a5:10:5a:8f:12:6f:93:bd:f1:48:62:3a:1f:19:f4:61:cc:70:61:ca:d4:fe:76:0f:1c:23:de:55:2e:29:97:37:6c:1e:38:31:d3:77:71:8a"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:52.588974783 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643512.588974783",
+          "frame.time_delta": "0.002068830",
+          "frame.time_delta_displayed": "0.002068830",
+          "frame.time_relative": "1.005201564",
+          "frame.number": "6",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "00:00",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "42",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "42",
+          "udp.checksum": "0x003d",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "1.005201564",
+            "udp.time_delta": "0.002068830"
+          },
+          "udp.payload": "00:34:12:01:04:00:00:00:8d:30:a0:e4:b9:1b:e8:57:d3:e7:a6:e6:ea:73:5e:4d:83:a4:c8:8b:63:0f:3b:cf:3f:99"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000004",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "8d:30:a0:e4:b9:1b:e8:57:d3:e7:a6:e6:ea:73:5e:4d:83:a4:c8:8b:63:0f:3b:cf:3f:99"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:53.585271129 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643513.585271129",
+          "frame.time_delta": "0.996296346",
+          "frame.time_delta_displayed": "0.996296346",
+          "frame.time_relative": "2.001497910",
+          "frame.number": "7",
+          "frame.len": "109",
+          "frame.cap_len": "109",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "64:00",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "53",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "53",
+          "udp.checksum": "0x0048",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "2.001497910",
+            "udp.time_delta": "0.996296346"
+          },
+          "udp.payload": "00:34:12:01:05:00:00:00:51:88:57:11:48:0b:aa:23:dd:84:c6:61:9e:8c:1c:6d:dd:72:bf:26:c7:db:4c:c2:cf:23:9f:15:5c:f9:20:d6:5e:87:3d:91:7f"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000005",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "51:88:57:11:48:0b:aa:23:dd:84:c6:61:9e:8c:1c:6d:dd:72:bf:26:c7:db:4c:c2:cf:23:9f:15:5c:f9:20:d6:5e:87:3d:91:7f"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:53.587365972 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643513.587365972",
+          "frame.time_delta": "0.002094843",
+          "frame.time_delta_displayed": "0.002094843",
+          "frame.time_relative": "2.003592753",
+          "frame.number": "8",
+          "frame.len": "113",
+          "frame.cap_len": "113",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "08:00",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x01163f",
+          "ipv6.plen": "57",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5540",
+          "udp.dstport": "5541",
+          "udp.port": "5540",
+          "udp.port": "5541",
+          "udp.length": "57",
+          "udp.checksum": "0x004c",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "2.003592753",
+            "udp.time_delta": "0.002094843"
+          },
+          "udp.payload": "00:34:12:01:03:00:00:00:55:d2:33:b4:4e:bb:22:7c:2d:b5:c7:ad:1f:02:88:b3:53:2c:90:08:23:0d:04:b4:78:69:51:24:48:5e:e2:e1:1d:c0:81:32:02:bb:34:31:05"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000003",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "55:d2:33:b4:4e:bb:22:7c:2d:b5:c7:ad:1f:02:88:b3:53:2c:90:08:23:0d:04:b4:78:69:51:24:48:5e:e2:e1:1d:c0:81:32:02:bb:34:31:05"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2021-10-08",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "any"
+          },
+          "frame.encap_type": "25",
+          "frame.time": "Oct  8, 2021 08:51:53.589516717 AEDT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1633643513.589516717",
+          "frame.time_delta": "0.002150745",
+          "frame.time_delta_displayed": "0.002150745",
+          "frame.time_relative": "2.005743498",
+          "frame.number": "9",
+          "frame.len": "98",
+          "frame.cap_len": "98",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ipv6:udp:matter"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "772",
+          "sll.halen": "6",
+          "sll.src.eth": "00:00:00:00:00:00",
+          "sll.unused": "3e:ca",
+          "sll.etype": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x03f6b4",
+          "ipv6.plen": "42",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "64",
+          "ipv6.src": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.src_host": "::1",
+          "ipv6.host": "::1",
+          "ipv6.dst": "::1",
+          "ipv6.addr": "::1",
+          "ipv6.dst_host": "::1",
+          "ipv6.host": "::1"
+        },
+        "udp": {
+          "udp.srcport": "5541",
+          "udp.dstport": "5540",
+          "udp.port": "5541",
+          "udp.port": "5540",
+          "udp.length": "42",
+          "udp.checksum": "0x003d",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "2.005743498",
+            "udp.time_delta": "0.002150745"
+          },
+          "udp.payload": "00:34:12:01:06:00:00:00:e6:71:cd:34:5e:2d:88:16:cc:81:7e:20:2f:f7:a0:66:81:fa:fb:83:16:92:39:be:21:e4"
+        },
+        "matter": {
+          "matter.msg_flags": "0x00",
+          "matter.msg_flags.version": "0",
+          "matter.msg_flags.flags.s": "0",
+          "matter.msg_flags.dest_size": "0",
+          "matter.session_id": "0x1234",
+          "matter.sec_flags": "0x34",
+          "matter.sec_flags.flags.p": "0",
+          "matter.sec_flags.flags.c": "0",
+          "matter.header.flags.mx": "0",
+          "matter.sec_flags.enc_type": "1",
+          "matter.message_id": "0x00000006",
+          "matter.source_node_id": "0x0000000000000000",
+          "matter.dest_node_id": "0x0000000000000000",
+          "matter.enc_data": "e6:71:cd:34:5e:2d:88:16:cc:81:7e:20:2f:f7:a0:66:81:fa:fb:83:16:92:39:be:21:e4"
+        }
+      }
+    }
+  }
+]
