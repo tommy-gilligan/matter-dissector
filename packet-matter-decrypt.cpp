@@ -21,8 +21,6 @@ using namespace matter;
 
 #define MATTER_MSG_NONCE_LENGTH     13
 
-#if OPENSSL_VERSION_NUMBER > 0x10100000L
-
 static bool _isValidTagLength(size_t tag_length)
 {
     return tag_length == 16;
@@ -108,9 +106,6 @@ exit:
 
     return error;
 }
-
-
-#endif
 
 #if 0
 

@@ -149,16 +149,10 @@ ComputeCASEMessageHash(tvbuff_t *tvb, uint16_t msgLenWithoutSig, uint32_t config
     uint8_t *msgWithoutSig = (uint8_t *)tvb_memdup(NULL, tvb, 0, msgLenWithoutSig);
 
     if (config == kCASEConfig_Config1) {
-        SHA_CTX hash;
-        SHA1_Init(&hash);
-        SHA1_Update(&hash, msgWithoutSig, msgLenWithoutSig);
-        SHA1_Final(hashBuf, &hash);
+	 SHA1(msgWithoutSig, msgLenWithoutSig, hashBuf);
     }
     else {
-        SHA256_CTX hash;
-        SHA256_Init(&hash);
-        SHA256_Update(&hash, msgWithoutSig, msgLenWithoutSig);
-        SHA256_Final(hashBuf, &hash);
+	 SHA256(msgWithoutSig, msgLenWithoutSig, hashBuf);
     }
 
     wmem_free(NULL, msgWithoutSig);

@@ -31,42 +31,39 @@ int HKDF_expand(const EVP_MD *md, const uint8_t *prKey, size_t prKeyLen, const u
     int res = 0;
     uint8_t hashNum = 1;
     size_t hashSize = EVP_MD_size(md);
-    unsigned int finalLen;
+    size_t finalLen;
 
-#if OPENSSL_VERSION_NUMBER > 0x10100000L
-    HMAC_CTX *hmac = HMAC_CTX_new();
-#else
-    HMAC_CTX hmacObj;
-    HMAC_CTX *hmac = &hmacObj;
-    HMAC_CTX_init(hmac);
-#endif
+    // sha1 or sha256 hashAlgo = (caseExchangeRec->config == kCASEConfig_Config1) ? EVP_sha1() : EVP_sha256();
+    EVP_MAC *mac = EVP_MAC_fetch(NULL, "SHA1", NULL);
+
+    EVP_MAC_CTX *hmac = EVP_MAC_CTX_new(mac);
 
     if (outKeyLen < 1 || outKeyLen > 255 * hashSize)
         goto exit;
 
     while (1) {
-
-        if (!HMAC_Init_ex(hmac, prKey, prKeyLen, md, NULL))
+        // skip checking if it is already initialized?
+        if (!EVP_MAC_init(hmac, prKey, prKeyLen, NULL))
             return 0;
 
         if (hashNum > 1) {
-            if (!HMAC_Update(hmac, outKey - hashSize, hashSize))
+            if (!EVP_MAC_update(hmac, outKey - hashSize, hashSize))
                 goto exit;
         }
 
         if (info != NULL && infoLen > 0) {
-            if (!HMAC_Update(hmac, info, infoLen))
+            if (!EVP_MAC_update(hmac, info, infoLen))
                 goto exit;
         }
 
-        if (!HMAC_Update(hmac, &hashNum, 1))
+        if (!EVP_MAC_update(hmac, &hashNum, 1))
             goto exit;
 
         if (outKeyLen < hashSize)
         {
             uint8_t finalHash[EVP_MAX_MD_SIZE];
 
-            if (!HMAC_Final(hmac, finalHash, &finalLen))
+            if (!EVP_MAC_final(hmac, finalHash, &finalLen, sizeof(finalHash)))
                 goto exit;
 
             memcpy(outKey, finalHash, outKeyLen);
@@ -74,7 +71,7 @@ int HKDF_expand(const EVP_MD *md, const uint8_t *prKey, size_t prKeyLen, const u
             break;
         }
 
-        if (!HMAC_Final(hmac, outKey, &finalLen))
+        if (!EVP_MAC_final(hmac, outKey, &finalLen, sizeof(outKey)))
             goto exit;
 
         outKey += hashSize;
@@ -85,10 +82,6 @@ int HKDF_expand(const EVP_MD *md, const uint8_t *prKey, size_t prKeyLen, const u
     res = 1;
 
 exit:
-#if OPENSSL_VERSION_NUMBER > 0x10100000L
-    HMAC_CTX_free(hmac);
-#else
-    HMAC_CTX_cleanup(hmac);
-#endif
+    EVP_MAC_CTX_free(hmac);
     return res;
 }
