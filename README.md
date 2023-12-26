@@ -55,13 +55,13 @@ Users should also be aware that the Matter dissector may have bugs that may caus
 
 
 ## Installation
-The current version of the Matter Wireshark plugin only runs on linux and requires Wireshark 3.6 or later.  This version is offered as a standard package on Ubuntu 18 and gLinux.  For older versions of Ubuntu, please see Upgrading Wireshark on Ubuntu below.
+The current version of the Matter Wireshark plugin only runs on linux and requires Wireshark 4.0 or later.  This version is offered as a standard package on Ubuntu 18 and gLinux.  For older versions of Ubuntu, please see Upgrading Wireshark on Ubuntu below.
 
 Installing the Wireshark plugin is as simple as copying the shared library file into your local plugins directory:
 
-    mkdir -p ${HOME}/.local/lib/wireshark/plugins/3.6/epan
-    cp matter-dissector.so ${HOME}.local/lib/wireshark/plugins/3.6/epan
-    chmod 700 ${HOME}/.local/lib/wireshark/plugins/3.6/epan/matter-dissector.so
+    mkdir -p ${HOME}/.local/lib/wireshark/plugins/4.0/epan
+    cp matter-dissector.so ${HOME}.local/lib/wireshark/plugins/4.0/epan
+    chmod 700 ${HOME}/.local/lib/wireshark/plugins/4.0/epan/matter-dissector.so
 
 ## Upgrading Wireshark on Ubuntu
 The Wireshark team maintains a PPA for Wireshark releases that have been back-ported to older Ubuntu distros: https://launchpad.net/~wireshark-dev/+archive/ubuntu/stable.
@@ -92,7 +92,7 @@ Building the Matter Wireshark plugin requires access to a Wireshark source tree 
 
     git clone https://gitlab.com/wireshark/wireshark.git
     cd wireshark
-    git checkout release-3.6
+    git checkout release-4.0
     mkdir build
     cd build
     cmake ..

@@ -65,11 +65,11 @@ using namespace matter;
 
 extern "C" {
 // Targets Wireshark version 3.6
-WS_DLL_PUBLIC const int plugin_want_major = 3;
-WS_DLL_PUBLIC const int plugin_want_minor = 6;
+WS_DLL_PUBLIC const int plugin_want_major = 4;
+WS_DLL_PUBLIC const int plugin_want_minor = 0;
 
 WS_DLL_PUBLIC const gchar plugin_version[] = PLUGIN_VERSION;
-WS_DLL_PUBLIC const gchar plugin_release[] = "3.6";
+WS_DLL_PUBLIC const gchar plugin_release[] = "4.0";
 WS_DLL_PUBLIC void plugin_register(void);
 }
 

@@ -25,7 +25,7 @@ WIRESHARK_BUILD_DIR ?= $(WIRESHARK_SRC_DIR)/build
 
 UNAME_S := $(shell uname -s)
 
-WIRESHARK_CFLAGS = -I$(WIRESHARK_SRC_DIR) -I$(WIRESHARK_BUILD_DIR)
+WIRESHARK_CFLAGS = -I$(WIRESHARK_SRC_DIR) -I$(WIRESHARK_BUILD_DIR) -I$(WIRESHARK_SRC_DIR)/include
 WIRESHARK_LDFLAGS =
 
 MATTER_ROOT ?= MatterMinimal
@@ -104,8 +104,8 @@ tests/test-packet-matter-decrypt.exe: tests/test-packet-matter-decrypt.o packet-
 
 
 install : $(PLUGIN_OUT)
-	mkdir -p ~/.local/lib/wireshark/plugins/3.6/epan
-	cp $(PLUGIN_OUT) ~/.local/lib/wireshark/plugins/3.6/epan
+	mkdir -p ~/.local/lib/wireshark/plugins/4.0/epan
+	cp $(PLUGIN_OUT) ~/.local/lib/wireshark/plugins/4.0/epan
 
 test : install
 	$(WIRESHARK_BUILD_DIR)/run/tshark -Y matter -2 -r $(TEST_INPUT).pcapng -T json > $(TEST_INPUT).json
